@@ -10,9 +10,9 @@ A API contempla os endpoints:
 
 
 Para executar deve ser criado um banco de dados utilizando o SQL Server na maquina local ou servido, 
-o nome do banco de dados deve ser SistemaAPP.
+o nome do banco de dados deve ser SistemaAPPDb.
 
-Após o banco SistemaAPP criado no SQL Server o script da pasta do database deverá ser executado para 
+Após o banco SistemaAPPDb criado no SQL Server o script da pasta do database deverá ser executado para 
 a criação das tabelas, automaticamente serão criados dois usuários, um administrador e outro cliente.
 
 	Usuário Administrador: administrador@email.com.br  Senha: 123
