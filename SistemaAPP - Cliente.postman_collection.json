@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "c79a3122-586d-4e30-b295-3e86deda4d16",
+		"name": "SistemaAPP - Cliente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5020736"
+	},
+	"item": [
+		{
+			"name": "Security",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"Email\": \"carla-bb@live.com\", \"Password\": \"123\", \"Name\":\"Carla de Barros Botelho\", \"EmployeeCode\": \"705919\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/employees",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Showcase",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc4OTE2NzksImV4cCI6MTcwOTUxNDA3OSwiaWF0IjoxNjc3ODkxNjc5LCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.DXCo2jZ-c8XJzkMEXNxU4qR8u6dcCRSD0zSDimMYL3k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/products/showcase",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"products",
+								"showcase"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "New Sale",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNsaWVudGVAZW1haWwuY29tIiwibmFtZWlkIjoiNmE2ZWY0ZDgtODVmNy00MDBlLWJlNmItM2JiZmNlYmM0M2E4IiwiQ3BmIjoiMDk1Njg2NDg4MDEiLCJOYW1lIjoiQ0xJRU5URSIsIm5iZiI6MTY3NzkzNzUwOCwiZXhwIjoxNzA5NTU5OTA4LCJpYXQiOjE2Nzc5Mzc1MDgsImlzcyI6IlNpc3RlbWFBcHBVc2VyIiwiYXVkIjoiQXVkaWVuY2UifQ.zArvMVGG7fqZF3Vs92WPPyoFfEqk8eL6Ug-HExE6xCM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"ProductIds\":[\"8e552f8a-de8f-4413-ad21-a1bb35c9007e\",\"6c51eb8f-ac7c-47d6-af9c-ab9829ede97c\"], \"DeliveryAddress\":\"Rua teste 123 456\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNsaWVudGVAZW1haWwuY29tIiwibmFtZWlkIjoiNmE2ZWY0ZDgtODVmNy00MDBlLWJlNmItM2JiZmNlYmM0M2E4IiwiQ3BmIjoiMDk1Njg2NDg4MDEiLCJOYW1lIjoiQ0xJRU5URSIsIm5iZiI6MTY3NzkzNzUwOCwiZXhwIjoxNzA5NTU5OTA4LCJpYXQiOjE2Nzc5Mzc1MDgsImlzcyI6IlNpc3RlbWFBcHBVc2VyIiwiYXVkIjoiQXVkaWVuY2UifQ.zArvMVGG7fqZF3Vs92WPPyoFfEqk8eL6Ug-HExE6xCM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/orders/e51835c4-9907-4f02-9a2d-efaf88f781f1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"orders",
+								"e51835c4-9907-4f02-9a2d-efaf88f781f1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "New Client",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc4OTE2NzksImV4cCI6MTcwOTUxNDA3OSwiaWF0IjoxNjc3ODkxNjc5LCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.DXCo2jZ-c8XJzkMEXNxU4qR8u6dcCRSD0zSDimMYL3k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"Email\": \"cliente2@email.com\", \"Password\": \"123\", \"Name\":\"CLIENTE 2\", \"Cpf\": \"16563113052\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/clients",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET /Version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7257/version",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7257",
+					"path": [
+						"version"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

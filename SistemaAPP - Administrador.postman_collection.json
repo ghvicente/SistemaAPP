@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "0b5e0c7d-62f9-45e5-b12e-1b56a7d0d9e4",
+		"name": "SistemaAPP - Administrador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5020736"
+	},
+	"item": [
+		{
+			"name": "Security",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"Email\": \"administrador@email.com.br\", \"Password\": \"123\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/token",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "New Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5MzgzMzAsImV4cCI6MTcwOTU2MDczMCwiaWF0IjoxNjc3OTM4MzMwLCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.FTCUDXvIVidv8Hw50Ntr0uxB9RwZnn2V9eyp7IEHFnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"Name\" : \"Storage\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5MzgzMzAsImV4cCI6MTcwOTU2MDczMCwiaWF0IjoxNjc3OTM4MzMwLCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.FTCUDXvIVidv8Hw50Ntr0uxB9RwZnn2V9eyp7IEHFnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"Name\" : \"Smartphones\", \"Active\": true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/categories/34ee708f-c30b-4d67-91c8-c774d00434e2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"categories",
+								"34ee708f-c30b-4d67-91c8-c774d00434e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5MzgzMzAsImV4cCI6MTcwOTU2MDczMCwiaWF0IjoxNjc3OTM4MzMwLCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.FTCUDXvIVidv8Hw50Ntr0uxB9RwZnn2V9eyp7IEHFnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5MzgzMzAsImV4cCI6MTcwOTU2MDczMCwiaWF0IjoxNjc3OTM4MzMwLCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.FTCUDXvIVidv8Hw50Ntr0uxB9RwZnn2V9eyp7IEHFnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/categories/699676e6-cebb-45bc-9ad5-5011fafc5a04",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"categories",
+								"699676e6-cebb-45bc-9ad5-5011fafc5a04"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "New Employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5MzgzMzAsImV4cCI6MTcwOTU2MDczMCwiaWF0IjoxNjc3OTM4MzMwLCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.FTCUDXvIVidv8Hw50Ntr0uxB9RwZnn2V9eyp7IEHFnA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"Email\": \"cliente@email.com.br\", \"Password\": \"123\", \"Name\":\"CLIENTE\", \"EmployeeCode\": \"123456\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/employees",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Employess",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/employees",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "New Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5NTE5MTQsImV4cCI6MTcwOTU3NDMxNCwiaWF0IjoxNjc3OTUxOTE0LCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.aysyUk-YqvQERltne9a1NBy1NTPD0Mft0omL2yKqWmo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"Code\" : \"30002\", \"Name\" : \"SSD Sandisk 960gb\", \"Description\":\"SSD Sandisk 960gb\", \"CategoryId\": \"5b0b1ea0-3110-4900-823b-8139ff5cdb74\", \"Price\": 699.00}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5NTE5MTQsImV4cCI6MTcwOTU3NDMxNCwiaWF0IjoxNjc3OTUxOTE0LCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.aysyUk-YqvQERltne9a1NBy1NTPD0Mft0omL2yKqWmo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Showcase",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5NTE5MTQsImV4cCI6MTcwOTU3NDMxNCwiaWF0IjoxNjc3OTUxOTE0LCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.aysyUk-YqvQERltne9a1NBy1NTPD0Mft0omL2yKqWmo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/products/showcase",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"products",
+								"showcase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Products Sold",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5NTE5MTQsImV4cCI6MTcwOTU3NDMxNCwiaWF0IjoxNjc3OTUxOTE0LCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.aysyUk-YqvQERltne9a1NBy1NTPD0Mft0omL2yKqWmo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/products/sold",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"products",
+								"sold"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5NTE5MTQsImV4cCI6MTcwOTU3NDMxNCwiaWF0IjoxNjc3OTUxOTE0LCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.aysyUk-YqvQERltne9a1NBy1NTPD0Mft0omL2yKqWmo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"Name\" : \"Caderno Brochura\", \"Description\":\"Caderno tipo brochura Tilibra\", \"CategoryId\": \"176fdbe6-64e6-488a-a910-06882007c41b\", \"hasStock\": true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7257/products/b4fc0016-9f6b-462e-a207-28fe6d866052",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"products",
+								"b4fc0016-9f6b-462e-a207-28fe6d866052"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "List All Clients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluaXN0cmFkb3JAZW1haWwuY29tLmJyIiwibmFtZWlkIjoiMmE3ODMyYjgtNzViZS00MDA0LWJkMDgtMzBhMWI1MDQ2ZDg2IiwiRW1wbG95ZWVDb2RlIjoiMTIzNDU2IiwiTmFtZSI6IkFETUlOSVNUUkFET1IiLCJDcmVhdGVkQnkiOiI4YTEyNzk0OC0xNGE3LTQ0OTQtODBlYy0xYmI5MzA5MTYzY2IiLCJuYmYiOjE2Nzc5NTI2NDAsImV4cCI6MTcwOTU3NTA0MCwiaWF0IjoxNjc3OTUyNjQwLCJpc3MiOiJTaXN0ZW1hQXBwVXNlciIsImF1ZCI6IkF1ZGllbmNlIn0.bQPVeQu2kW-7haDadWY747DcSPoftZM-OmyeLbXyiz8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7257/clients/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7257",
+							"path": [
+								"clients",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
