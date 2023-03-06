@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KUPvz7Q5aWpbKxvRhjmhjn/xk485rQ6c8CTSfZu3ARc2pCwHCiXY5fGZTc0II7re2R0Jwabw+ZY1fbbPkbMkqw==",
+  "dgSpecHash": "Ez+tLWjDxs7FFslyYgL8ojq54Jc9XtGHFHVL0D5Jvsr/uSFykMAuvVMLf4HZkba3qZbL/+QbO0V92PpfAwnYbg==",
   "success": true,
-  "projectFilePath": "D:\\Particular\\Cursos\\SistemaAPP\\src\\SistemaAPP.csproj",
+  "projectFilePath": "D:\\Demonstracao\\SistemaAPP\\src\\SistemaAPP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ghvic\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ghvic\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

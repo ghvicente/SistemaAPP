@@ -4536,11 +4536,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Particular\\Cursos\\SistemaAPP\\src\\SistemaAPP.csproj",
+      "projectUniqueName": "D:\\Demonstracao\\SistemaAPP\\src\\SistemaAPP.csproj",
       "projectName": "SistemaAPP",
-      "projectPath": "D:\\Particular\\Cursos\\SistemaAPP\\src\\SistemaAPP.csproj",
+      "projectPath": "D:\\Demonstracao\\SistemaAPP\\src\\SistemaAPP.csproj",
       "packagesPath": "C:\\Users\\ghvic\\.nuget\\packages\\",
-      "outputPath": "D:\\Particular\\Cursos\\SistemaAPP\\src\\obj\\",
+      "outputPath": "D:\\Demonstracao\\SistemaAPP\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
